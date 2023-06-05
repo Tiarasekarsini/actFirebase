@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "789274065927",
+    "project_id": "actfirebase-6566f",
+    "storage_bucket": "actfirebase-6566f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789274065927:android:edfd3a805583f9e7defea2",
+        "android_client_info": {
+          "package_name": "com.example.actfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHKUmW6Bxn-LKhJHfw8FoUr5NVtXY2C1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
