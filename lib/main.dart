@@ -1,5 +1,6 @@
 import 'package:actfirebase/view/add_contact.dart';
 import 'package:actfirebase/view/contact.dart';
+import 'package:actfirebase/view/login.dart';
 import 'package:actfirebase/view/register.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const AddContact(),
       // home: const Contact(),
-      home: Register(),
+      home: Login(),
     );
   }
 }

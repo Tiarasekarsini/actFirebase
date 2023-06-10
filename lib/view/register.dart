@@ -98,6 +98,12 @@ class Register extends StatelessWidget {
                     }
                   },
                   child: const Text('Register'),
+                  style: ElevatedButton.styleFrom(
+                    // backgroundColor: Colors.pink,
+                    minimumSize: Size(double.infinity, 50),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40)),
+                  ),
                 ),
               ],
             )),
