@@ -1,5 +1,6 @@
 import 'package:actfirebase/controller/auth_controller.dart';
 import 'package:actfirebase/model/usermdl.dart';
+import 'package:actfirebase/view/login.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget {
@@ -61,10 +62,10 @@ class Register extends StatelessWidget {
                               actions: <Widget>[
                                 TextButton(
                                   onPressed: () {
-                                    // Navigator.push(context,
-                                    //     MaterialPageRoute(builder: (context) {
-                                    //   return Login();
-                                    // }));
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Login();
+                                    }));
                                     // Navigate to the next screen or perform any desired action
                                   },
                                   child: const Text('OK'),
