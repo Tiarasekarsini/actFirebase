@@ -63,7 +63,12 @@ class _ContactState extends State<Contact> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const EditContact(),
+                              builder: (context) => EditContact(
+                                  id: data[index]['id'],
+                                  namaAsal: data[index]['name'],
+                                  phoneAsal: data[index]['phone'],
+                                  emailAsal: data[index]['email'],
+                                  addressAsal: data[index]['address']),
                             ),
                           );
                         },

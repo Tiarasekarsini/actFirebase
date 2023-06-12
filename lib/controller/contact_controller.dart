@@ -37,6 +37,7 @@ class ContactController {
     return contact.docs;
   }
 
+//kode awal
   // Future<void> updateContact(ContactModel ctmodel) async {
   //   var document = contactCollection.doc(ctmodel.id);
 
@@ -50,23 +51,35 @@ class ContactController {
   //   await document.update(contactModel.toMap());
   // }
 
-  Future editContact(ContactModel contactModel) async {
-    final ContactModel editContactModel = ContactModel(
-        name: contactModel.name,
-        email: contactModel.email,
-        phone: contactModel.phone,
-        address: contactModel.address,
-        id: contactModel.id);
+  Future<void> editContact(ContactModel contactModel) async {
+    var document = contactCollection.doc(contactModel.id);
 
-    final DocumentSnapshot documentSnapshot =
-        await contactCollection.doc(contactModel.id).get();
-    if (!documentSnapshot.exists) {
-      // print('Contact with ID $doc does not exist');
-      return;
-    }
-    final editContact = editContactModel.toMap();
-    await contactCollection.doc(contactModel.id).update(editContact);
-    await getContact();
+    final ContactModel cModel = ContactModel(
+        id: contactModel.id,
+        name: contactModel.name,
+        phone: contactModel.phone,
+        email: contactModel.email,
+        address: contactModel.address);
+
+    await document.update(cModel.toMap());
+
+    //saat demo dikelas
+    // final ContactModel editContactModel = ContactModel(
+    //     name: contactModel.name,
+    //     email: contactModel.email,
+    //     phone: contactModel.phone,
+    //     address: contactModel.address,
+    //     id: contactModel.id);
+
+    // final DocumentSnapshot documentSnapshot =
+    //     await contactCollection.doc(contactModel.id).get();
+    // if (!documentSnapshot.exists) {
+    //   // print('Contact with ID $doc does not exist');
+    //   return;
+    // }
+    // final editContact = editContactModel.toMap();
+    // await contactCollection.doc(contactModel.id).update(editContact);
+    // await getContact();
     // print('Updated contact with ID: $docId');
   }
 
